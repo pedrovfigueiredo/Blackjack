@@ -1,9 +1,8 @@
 import sys
 
 class Generic_Player(object):
-    def __init__(self, hand, total_money, name):
+    def __init__(self, hand, name):
         self.hand = hand
-        self.total_money = total_money
         self.name = name
 
     def addCardToHand(self, card):

@@ -20,7 +20,11 @@ class Deck:
         random.shuffle(self.deck)
 
     def requestCard(self):
-        return self.deck.pop()
+        try:
+            return self.deck.pop()
+        except IndexError:
+            self.resetDeck()
+            return self.deck.pop()
 
     def shuffleCards(self):
         random.shuffle(self.deck)
